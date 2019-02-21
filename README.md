@@ -33,6 +33,9 @@ $ ionic generate page entrar
 ### 6)Crear una lista.
 ### 7)Utilizar un objeto json para el contenido.
 ### 8)Transformar el header en componente.
+```
+$ ionic generate component encabezado
+```
 
 
 

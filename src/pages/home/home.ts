@@ -7,7 +7,7 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-	titulo = 'Listado';
+	tituloPagina: string = "Listado";
 
 	listado:any;
 
