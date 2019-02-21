@@ -31,9 +31,8 @@ $ ionic generate page entrar
 ### 4)Transformar título de barra de navegación en variable.
 ### 5)Agregar imágenes en la barra de navegación.
 ### 6)Crear una lista.
-
-### 6)Utilizar un objeto json para el contenido.
-### 7)Transformar el header en componente.
+### 7)Utilizar un objeto json para el contenido.
+### 8)Transformar el header en componente.
 
 
 
