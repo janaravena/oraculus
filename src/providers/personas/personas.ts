@@ -10,13 +10,15 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class PersonasProvider {
 
+	apiUrl = 'https://reqres.in/api/users';
+
   constructor(public http: HttpClient) {
     console.log('Hello PersonasProvider Provider');
   }
 
   readPersonasList(): Promise <any> {
   	return new Promise ((resolve, reject) => {
-  		this.http.get('https://reqres.in/api/users?per_page=10')
+  		this.http.get(this.apiUrl + '?per_page=10')
   		.subscribe(res => {
   			resolve(res['data'])
   		}, (err) => {
@@ -27,7 +29,19 @@ export class PersonasProvider {
 
   createPersona( item: any): Promise <any> {
   	return new Promise ((resolve, reject) => {
-  		this.http.post('https://reqres.in/api/users', item)
+  		this.http.post(this.apiUrl , item)
+  		.subscribe(res => {
+  			resolve(res)
+  		}, (err) => {
+  			reject(err);
+  		});
+  	});
+  };
+
+  updatePersona( item: any, idP: number): Promise <any> {
+  	return new Promise ((resolve, reject) => {
+  		console.log(this.apiUrl + '/' + idP);
+  		this.http.put(this.apiUrl + '/' + idP , item)
   		.subscribe(res => {
   			resolve(res)
   		}, (err) => {

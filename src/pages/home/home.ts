@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, AlertController, ItemSliding } from 'ionic-angular';
 
 import { PersonasProvider } from '../../providers/personas/personas';
 
@@ -40,7 +40,7 @@ export class HomePage {
   gotoAgregar() {
 
   let alert = this.alertCtrl.create({
-    title: 'Login',
+    title: 'Crear Persona',
     inputs: [
       {
         name: 'first_name',
@@ -64,7 +64,7 @@ export class HomePage {
         }
       },
       {
-        text: 'Agregar',
+        text: 'Crear',
         handler: data => {
           this.agregarPersona(data);
         }
@@ -87,6 +87,62 @@ export class HomePage {
         console.error(error)
     })
 }
+
+gotoEditar(slidingItem: ItemSliding, item:any, indexP: number) {
+
+  slidingItem.close();
+
+  let alert = this.alertCtrl.create({
+    title: 'Editar Persona',
+    inputs: [
+      {
+        name: 'first_name',
+        placeholder: 'Nombre',
+        value: item.first_name
+      },
+      {
+        name: 'last_name',
+        placeholder: 'Apellido',
+        value: item.last_name
+      },
+      {
+        name: 'avatar',
+        placeholder: 'URL avatar',
+        value: item.avatar
+      }
+    ],
+    buttons: [
+      {
+        text: 'Cancel',
+        role: 'cancel',
+        handler: data => {
+          console.log('Cancel clicked');
+        }
+      },
+      {
+        text: 'Agregar',
+        handler: data => {
+          this.editarPersona(data, item.id, indexP);
+        }
+      }
+    ]
+  });
+  alert.present();
+
+  }
+
+  editarPersona(item: any, ideP: number, indexP: number) {
+    this.persProv.updatePersona(item, ideP)
+      .then(data => {
+        console.log(data);
+
+        //Como es un servicio mockup, se puede usar:
+        this.listado[indexP] = data;
+        console.log(this.listado);
+      }, (error) => {
+        console.error(error)
+    })
+  }
 
 
 }

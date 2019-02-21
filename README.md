@@ -55,7 +55,7 @@ https://uifaces.co/
 
 **POST:** https://reqres.in/api/users
 
-
 ### 6)Agregar función para editar.
+**PUT:** https://reqres.in/api/users/***id***
 ### 7)Agregar función para eliminar.
 
