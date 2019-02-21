@@ -47,6 +47,8 @@ $ ionic generate component encabezado
 $ ionic generate provider personas
 ```
 ### 5)Crear páginas y servicios para función agregar.
+https://uifaces.co/
+
 ### 6)Agregar función para editar.
 ### 7)Agregar función para eliminar.
 
