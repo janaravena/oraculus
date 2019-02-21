@@ -1,5 +1,6 @@
 # oraculus
-##Ejercicios Modulo 1
+
+## Ejercicios Modulo 1
 
 ### 1)Crear una app en blanco.
 ```
@@ -37,7 +38,8 @@ $ ionic generate page entrar
 $ ionic generate component encabezado
 ```
 
-##Ejercicios Modulo 2
+
+## Ejercicios Modulo 2
 
 ### 1)Debugear la aplicación.
 ### 2)Utilizar Lazy Loading.
@@ -46,8 +48,13 @@ $ ionic generate component encabezado
 ```
 $ ionic generate provider personas
 ```
+**GET:** https://reqres.in/api/users?per_page=10
+
 ### 5)Crear páginas y servicios para función agregar.
 https://uifaces.co/
+
+**POST:** https://reqres.in/api/users
+
 
 ### 6)Agregar función para editar.
 ### 7)Agregar función para eliminar.

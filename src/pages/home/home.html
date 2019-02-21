@@ -3,10 +3,6 @@
 </ion-header>
 
 <ion-content padding>
-	<button ion-button color="secondary" icon-only (click)="gotoAgregar()" >
-	    <ion-icon name='add-circle'></ion-icon>
-	</button>
-
 
 <ion-list *ngIf="listado">
 
@@ -20,5 +16,9 @@
   </ion-item>
 
 </ion-list>
+
+<ion-fab bottom right >
+    <button ion-fab mini color="secondary" (click)="gotoAgregar()"><ion-icon name="add"></ion-icon></button>
+ </ion-fab>
 
 </ion-content>
