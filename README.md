@@ -24,8 +24,12 @@ $ ionic cordova platform add android
 $ ionic cordova resources
 ```
 ### 3)Agregar una página de detalle.
-### 4)Agregar una barra de navegación.
-### 5)Utilizar imágenes en las vistas.
+```
+$ ionic generate page entrar
+```
+
+### 4)Transformar título de barra de navegación en variable.
+### 5)Agregar imágenes en la barra de navegación.
 ### 6)Utilizar un objeto json para el contenido.
 ### 7)Transformar el header en componente.
 
