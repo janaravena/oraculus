@@ -43,6 +43,9 @@ $ ionic generate component encabezado
 ### 2)Utilizar Lazy Loading.
 ### 3)Utilizar navegación para el paso de variables a detalle.
 ### 4)Consumir servicio para el listado y el detalle.
+```
+$ ionic generate provider personas
+```
 ### 5)Crear páginas y servicios para función agregar.
 ### 6)Agregar función para editar.
 ### 7)Agregar función para eliminar.

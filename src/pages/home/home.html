@@ -4,9 +4,9 @@
 
 <ion-content padding>
 
-<ion-list>
+<ion-list *ngIf="listado">
 
-  <ion-item *ngFor='let item of listado.data'>
+  <ion-item *ngFor='let item of listado'>
     <ion-avatar item-start>
       <img [src]='item.avatar'>
     </ion-avatar>
