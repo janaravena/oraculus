@@ -81,7 +81,8 @@ export class HomePage {
         console.log(data);
 
         //Como es un servicio mockup, se puede usar:
-        this.listado.push(data);
+        //this.listado.push(data); //al final
+        this.listado.unshift(data); //al final
         console.log(this.listado);
       }, (error) => {
         console.error(error)
@@ -120,7 +121,7 @@ gotoEditar(slidingItem: ItemSliding, item:any, indexP: number) {
         }
       },
       {
-        text: 'Agregar',
+        text: 'Guardar',
         handler: data => {
           this.editarPersona(data, item.id, indexP);
         }
@@ -142,6 +143,20 @@ gotoEditar(slidingItem: ItemSliding, item:any, indexP: number) {
       }, (error) => {
         console.error(error)
     })
+  }
+
+  borrarPersona(slidingItem: ItemSliding, item:any, indexP: number) {
+    slidingItem.close();
+
+    this.persProv.deletePersona(item.id)
+      .then(data => {
+        //Como es un servicio mockup, se puede usar:
+        this.listado.splice(indexP,1)
+        console.log(this.listado);
+      }, (error) => {
+        console.error(error)
+    })
+
   }
 
 

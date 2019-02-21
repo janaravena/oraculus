@@ -50,5 +50,17 @@ export class PersonasProvider {
   	});
   };
 
+  deletePersona(idP: number): Promise <any> {
+  	return new Promise ((resolve, reject) => {
+  		console.log(this.apiUrl + '/' + idP);
+  		this.http.delete(this.apiUrl + '/' + idP)
+  		.subscribe(res => {
+  			resolve(res)
+  		}, (err) => {
+  			reject(err);
+  		});
+  	});
+  };
+
 
 }

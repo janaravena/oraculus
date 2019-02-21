@@ -6,7 +6,7 @@
 
   <ion-list *ngIf="listado">
 
-    <ion-item-sliding *ngFor='let item of listado' (ionSwipe)="delete(item)" #slidingItem>
+    <ion-item-sliding *ngFor='let item of listado' #slidingItem>
       <ion-item >
         <ion-avatar item-start>
           <img [src]='item.avatar'>
@@ -17,7 +17,11 @@
       </ion-item>
 
       <ion-item-options side="right">
-    <button ion-button expandable (click)="gotoEditar(slidingItem, item, listado.indexOf(item))">Editar</button>
+    <button ion-button color="primary" icon-start expandable (click)="gotoEditar(slidingItem, item, listado.indexOf(item))"><ion-icon name="create"></ion-icon>Editar</button>
+  </ion-item-options>
+
+  <ion-item-options side="left">
+    <button ion-button color="danger" icon-start expandable (click)="borrarPersona(slidingItem, item, listado.indexOf(item))"><ion-icon name="trash"></ion-icon>Eliminar</button>
   </ion-item-options>
 
     </ion-item-sliding>
