@@ -29,4 +29,9 @@ export class HomePage {
 
   }
 
+  	gotoDetalles(item: any){
+		this.navCtrl.push('DetallePage', {
+	        'item': item
+	    });
+	}
 }

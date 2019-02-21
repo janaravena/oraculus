@@ -1,4 +1,3 @@
-
 <ion-header>
 	<encabezado [PageTitle]="tituloPagina" ></encabezado>
 </ion-header>
@@ -13,6 +12,7 @@
     </ion-avatar>
     <h2>{{ item.first_name }}</h2>
     <p>{{ item.last_name }}</p>
+    <ion-icon name="arrow-forward" (click)= "gotoDetalles(item)"></ion-icon>
   </ion-item>
 
 </ion-list>
